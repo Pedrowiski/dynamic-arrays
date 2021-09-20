@@ -31,9 +31,7 @@ static void delete(Array *self, int index) {
     int real_position = self->used - 1;
     int distance      = real_position - index;
 
-    if (index == real_position) {
-        self->array[--self->used] = 0;
-    } else if (index > real_position) {
+    if ((index > real_position) || (index < 0)) {
         return;
     } else {
         for (int counter = 0; counter < distance; counter++) {
