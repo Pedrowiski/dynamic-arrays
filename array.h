@@ -16,7 +16,7 @@ typedef struct Array {
     void (*deleteAll)(struct Array *);
 } Array;
 
-Array initArray(int init_size);
+extern Array initArray(int init_size);
 static void insert(Array *self, int data);
 static void delete(Array *self, int index);
 static void deleteAll(Array *self);
