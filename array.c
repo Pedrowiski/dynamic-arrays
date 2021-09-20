@@ -48,7 +48,7 @@ static void delete(Array *self, int index) {
     }
 }
 
-void deleteAll(Array *self) {
+static void deleteAll(Array *self) {
     free(self->array);
     self->size = 0;
     self->used = 0;
